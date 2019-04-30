@@ -49,3 +49,7 @@
   font-size: 12px;
   text-transform: uppercase;
 }
+.result-notfound {
+  padding: 10px 0;
+  font-size: 15px;
+}

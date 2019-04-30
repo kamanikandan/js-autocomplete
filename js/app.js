@@ -9,7 +9,7 @@ async function fetchCountries() {
   countries = results;
 }
 //Search Country
-let searchCountries = async searchText => {
+let searchCountries = searchText => {
   let regEx = new RegExp(`^${searchText}`, "gi");
   let filteredCountries = countries.filter(country => {
     return (
@@ -29,6 +29,8 @@ let searchCountries = async searchText => {
     })
     .join("");
   if (searchText.length == 0) searchResults.innerHTML = "";
+  else if (searchText.length != 0 && filteredCountries.length == 0)
+    searchResults.innerHTML = "<p class='result-notfound'>No Match found!</p>";
   else searchResults.innerHTML = renderHtml;
 };
 
