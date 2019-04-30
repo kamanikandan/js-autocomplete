@@ -4,7 +4,7 @@ let countries = [];
 fetchCountries();
 //Fetch Countries
 async function fetchCountries() {
-  let response = await fetch("../data/countries.json");
+  let response = await fetch("./data/countries.json");
   let results = await response.json();
   countries = results;
 }
